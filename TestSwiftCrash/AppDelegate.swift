@@ -44,6 +44,8 @@ enum Test {
         }
 
         private func customMap(_ items: [Int]) -> [(Int, Data)] {
+            // can be fixed by create manual copy of var
+//            let artworkService = self.artworkService
             return items.map { [artworkService] num in
                 return (num, artworkService.artwork(for: "\(num)"))
             }
